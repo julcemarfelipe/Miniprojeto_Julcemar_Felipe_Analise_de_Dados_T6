@@ -89,10 +89,10 @@ O notebook varia propositalmente o **tipo de figura** conforme a pergunta de an�
 | 2 | Ranking horizontal (`barh`) | 6.2 | Ranking de categorias por unidades |
 | 3 | Heatmap de tabela pivô | 6.3 | Cruzamento gênero × categoria |
 | 4 | Série temporal (linha + marcadores) | 6.5 | Vendas mensais 2019–2022 |
-| 5 | **Gráfico de donut** 🆕 | 6.7 | Participação de cada categoria no total |
-| 6 | **Boxplot** 🆕 | 6.7 | Dispersão e outliers de filhos por segmento |
-| 7 | **Heatmap ano × mês** 🆕 | 6.7 | Sazonalidade das vendas |
-| 8 | **Animação (GIF)** 🆕 | 6.7 | Evolução mês a mês da série temporal |
+| 5 | Gráfico de donut  | 6.7 | Participação de cada categoria no total |
+| 6 | Boxplot | 6.7 | Dispersão e outliers de filhos por segmento |
+| 7 | Heatmap ano × mês | 6.7 | Sazonalidade das vendas |
+| 8 | Animação (GIF) 🆕 | 6.7 | Evolução mês a mês da série temporal |
 
 ### Animação gerada pelo notebook
 
@@ -111,7 +111,7 @@ O notebook varia propositalmente o **tipo de figura** conforme a pergunta de an�
 1. A base cobre **18.471 compras** de **1.000 clientes distintos**, entre **04/01/2019** e **08/12/2022**.
 2. **ALIMENTOS** lidera com **434.767 unidades** — muito acima das demais (HIGIENE 155.574; LIMPEZA 145.754).
 3. O gênero **F** concentra mais compras (**9.615** vs 8.856 de M), mas a diferença é pequena: não há público dominante.
-4. **100%** dos 3.650 registros com categoria `#N/D` vêm de um único produto (`PR_ID` 107): não é erro aleatório, é falta de cadastro.
+4. **100%** dos 3.650 registros com categoria `#N/D` vêm de um único produto (`PR_ID` 107): não é erro aleatório, é `FALTA DE CADASTRO`.
 5. As **96.553** linhas duplicadas não foram descartadas: viraram a coluna `QUANTIDADE`, preservando a informação real de unidades por compra.
 6. A média de filhos por cliente é **1,14** (mediana 0); o segmento **C** tem a maior média (1,18) — útil para campanhas por perfil familiar.
 
@@ -139,16 +139,13 @@ O notebook varia propositalmente o **tipo de figura** conforme a pergunta de an�
 
 Fazer este mini-projeto me fez viver na prática as três etapas do ciclo de ETL.
 No **Extract**, percebi que o formato físico do arquivo dita o carregamento: separador `;`,
-datas como texto e um ponto e vírgula sobrando no fim das linhas criaram quatro colunas
-100% vazias. No **Transform**, aprendi que limpar não é apenas apagar: cada decisão exige
+datas como texto e  pontos e vírgulas,`;`, sobrando no fim das linhas criaram quatro colunas
+100% vazias. 
+No **Transform**, aprendi que limpar não é apenas apagar: cada decisão exige
 justificativa técnica — como converter as 96.553 duplicidades em uma coluna `QUANTIDADE`
 (apagar as linhas descartaria vendas reais) e tratar `#N/D` como "Sem Categoria" sem excluir
-o item, já que o produto foi de fato comprado. No **Load**, entreguei a base em dois níveis
-(item e compra), cada um adequado a um tipo de pergunta. Sobre **qualidade de dados**, a
-maior lição foi que problemas podem ficar escondidos: `#N/D` não aparece no `isnull()` por
-ser uma string, e inconsistências como `LIMaO` vs `LIMAO` dividem silenciosamente um
-`groupby()`. Com mais tempo, eu automatizaria essas verificações como testes de dados
-(asserts de formato, unicidade de chaves e domínios permitidos), publicaria um painel
+o item, já que o produto foi de fato comprado. 
+No **Load**, entreguei a base em dois níveis(item e compra), cada um adequado a um tipo de pergunta. Sobre **qualidade de dados**, a maior lição foi que problemas podem ficar escondidos: `#N/D` não aparece no `isnull()` por ser uma string, e inconsistências como `LIMaO` vs `LIMAO` dividem silenciosamente um `groupby()`. Com mais tempo, eu automatizaria essas verificações como testes de dado (asserts de formato, unicidade de chaves e domínios permitidos), publicaria um painel
 interativo e aprofundaria a série temporal com decomposição de sazonalidade.
 
 ---
