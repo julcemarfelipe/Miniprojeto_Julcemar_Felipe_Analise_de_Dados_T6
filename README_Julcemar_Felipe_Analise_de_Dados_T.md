@@ -160,5 +160,6 @@ interativo e aprofundaria a série temporal com decomposição de sazonalidade.
 - Base Varejo (Kaggle): <https://www.kaggle.com/datasets/namespaiva/base-varejo/data>
 - Documentação do pandas: <https://pandas.pydata.org/docs/>
 - Documentação de animações do Matplotlib: <https://matplotlib.org/stable/api/animation_api.html>
+- Ferramenta de Apoio (IA Generativa): GOOGLE. Gemini. [Modelo de linguagem de inteligência         artificial]. Mountain View: Google, 2026. Disponível em: <https://gemini.google.com>. Utilizado como suporte na ideação de código, estruturação e revisão da documentação técnica
 - Material da disciplina Análise de Dados com Python (Turma T6)# Miniprojeto_Julcemar_Felipe_Analise_de_Dados_T6
 Mini-Projeto Avaliativo - Módulo 1 - Semana 07
