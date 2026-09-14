@@ -15,7 +15,7 @@ limpeza, validação de regras de negócio, estatística descritiva e agrupament
 
 | Arquivo | Descrição |
 |---|---|
-| `Base_Varejo.ipynb` / `miniprojeto_varejo.py` | Script/Notebook principal, com todas as etapas da análise |
+| `Base_Varejo.ipynb`  | Script/Notebook principal, com todas as etapas da análise |
 | `Base Varejo.csv` | Base de dados original (não incluída no repositório — baixe do Kaggle) |
 | `df_limpo.csv` | Gerado automaticamente ao rodar o script (base já limpa, 1 linha = 1 item com `QUANTIDADE`) |
 | `df_compras.csv` | Gerado automaticamente ao rodar o script (1 linha = 1 compra agregada por `CO_ID`) |
