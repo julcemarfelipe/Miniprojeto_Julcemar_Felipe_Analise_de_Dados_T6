@@ -94,14 +94,19 @@ O notebook varia propositalmente o **tipo de figura** conforme a pergunta de an�
 | 7 | Heatmap ano × mês | 6.7 | Sazonalidade das vendas |
 | 8 | Animação (GIF) 🆕 | 6.7 | Evolução mês a mês da série temporal |
 
-### Animação gerada pelo notebook
+### Animação Serie Temporal
 
 ![Animação — unidades vendidas por mês](vendas_anim.gif)
 
-### Figuras estáticas (salvas na pasta `figuras/`)
+### Gráficos
 
+Gráfico Donut
 ![Donut — categorias](figuras/donut_categorias.png)
+
+Gráfico Boxplot
 ![Boxplot — filhos por segmento](figuras/boxplot_filhos_segmento.png)
+
+Mapa de Calor
 ![Heatmap — ano × mês](figuras/heatmap_ano_mes.png)
 
 ---
